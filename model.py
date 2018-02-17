@@ -2,8 +2,24 @@
 
 """
 
+import random
+
 class Application:
     pass
+
+colors = ["blue", "yellow", "green", "red", "black", "white"]
+
+class Pegs:
+    def __init__(self):
+        self.pegList = []
+
+
+    def randomize(self):
+        self.pegList = []
+        self.pegList.append (random.choice(colors))
+        self.pegList.append(random.choice(colors))
+        self.pegList.append (random.choice(colors))
+        self.pegList.append(random.choice(colors))
 
 class Board:
     """
@@ -14,3 +30,8 @@ class Board:
     """
     pass
 
+
+objective = Pegs()
+
+objective.randomize()
+print(objective.pegList)
